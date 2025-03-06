@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{292cf976-3214-4b17-b3fc-0b56e877a8f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\data_types">
+      <UniqueIdentifier>{e68fd44a-7e9a-4ca8-abd8-742366bdee5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{34932eaa-f422-4e4e-918f-39c6d498a56e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{57389a53-b81c-4c8b-b149-d73de66564f0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Synthetic Data Generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TabularData.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TabularData.cpp">
+      <Filter>Source Files\data_types</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomGenerators.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Distributions.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="FileExport.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageData.cpp">
+      <Filter>Source Files\data_types</Filter>
+    </ClCompile>
+    <ClCompile Include="TextData.cpp">
+      <Filter>Source Files\data_types</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSeriesData.cpp">
+      <Filter>Source Files\data_types</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioData.cpp">
+      <Filter>Source Files\data_types</Filter>
+    </ClCompile>
+    <ClCompile Include="test_TabularData.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_ImageData.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_TextData.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_TimeSeriesData.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="test_AudioData.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RandomGenerators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSeriesData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Distributions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Synthetic Data Generator.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
