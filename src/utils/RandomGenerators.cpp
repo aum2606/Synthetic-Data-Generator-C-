@@ -9,7 +9,7 @@ bool RandomGenerators::isInitialized = false;
 
 void RandomGenerators::initialize(unsigned int seed)
 {
-	if (seed = 0) {
+	if (seed == 0) {
 		//use current time as seed if none provided
 		seed = static_cast<unsigned int> (std::chrono::high_resolution_clock::now().time_since_epoch().count());
 	}
@@ -19,6 +19,9 @@ void RandomGenerators::initialize(unsigned int seed)
 
 int RandomGenerators::getRandomInt(int min, int max) {
 	if (!isInitialized) {
+		initialize();
+	}
+	if (min > max) {
 		throw std::invalid_argument("Min value must be less than or equal to max value");
 	}
 	std::uniform_int_distribution<int> distribution(min, max);

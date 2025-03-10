@@ -25,7 +25,7 @@ public:
 	TabularData(int numRows, int numColumns);
 	TabularData(int numRows, const std::vector<ColumnDefinition>& columns);
 
-	void setColumnDeinitions(const std::vector<ColumnDefinition>& columns);
+	void setColumnDefinitions(const std::vector<ColumnDefinition>& columns);
 	void generate();
 	void exportToCSV(const std::string& filename)const;
 	void exportToJSON(const std::string& filename)const;

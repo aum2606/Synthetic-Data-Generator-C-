@@ -35,15 +35,23 @@ TabularData::TabularData(int numRows, int numColumns) : numRows(numRows) {
 		case 3:
 			col.type = ColumnType::DATE;
 			col.parameters["start"] = "2020-01-01";
-			col.parameters["end"] = "2020-12-31";
+			col.parameters["end"] = "2023-12-31";
+			break;
+		case 4:
+			col.type = ColumnType::BOOLEAN;
 			break;
 		}
 		defaultColumns.push_back(col);
 	}
-	setColumnDeinitions(defaultColumns);
+	setColumnDefinitions(defaultColumns);
 }
 
 TabularData::TabularData(int numRows, const std::vector<ColumnDefinition>& columns) {
+	this->numRows = numRows;
+	this->columns = columns;
+}
+
+void TabularData::setColumnDefinitions(const std::vector<ColumnDefinition>& columns) {
 	this->columns = columns;
 }
 
@@ -130,7 +138,7 @@ std::string TabularData::generateCategoricalValue(const ColumnDefinition& column
 
 std::string TabularData::generateDateValue(const ColumnDefinition& column) {
 	std::string startDate = "2020-01-01";
-	std::string endDate = "2020-12-31";
+	std::string endDate = "2023-12-31";
 	auto it = column.parameters.find("start");
 	if (it != column.parameters.end()) {
 		startDate = it->second;
@@ -153,9 +161,10 @@ std::string TabularData::generateDateValue(const ColumnDefinition& column) {
 	std::time_t randomTime = startTime + RandomGenerators::getRandomInt(0, endTime - startTime);
 
 	//convert back to string
-	std::tm* randomTm = std::localtime(&randomTime);
+	std::tm randomTm;
+	localtime_s(&randomTm, &randomTime);
 	char buffer[11];
-	std::strftime(buffer, sizeof(buffer), "%Y-%m-%d", randomTm);
+	std::strftime(buffer, sizeof(buffer), "%Y-%m-%d", &randomTm);
 	return std::string(buffer);
 }
 
